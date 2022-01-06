@@ -1,0 +1,32 @@
+*** Weather it is me or not ***
+
+1. Know exactly what you are trying to do (High Level)
+2. Figure out what you are going to need to make it (High Level)
+3. Understand how you are going to implement it in React
+4. Netlify
+5. Personal GitHub (Non enterprise)
+
+*** Response to numbered list ***
+
+1. I want the temperature and/or weather (ex: snow, rain, cloud, etc) and I want their mood input (very neg to very pos), then based off the data and information 
+give some tips 
+    ex: 
+        a. It is {deg} outside, generally considered hot, if you aren't feeling well hot temperatures could potentially increase the symptoms and risk of etc 
+
+2. What I need:
+a. Weather data
+    i. need to be able to use it
+    ii. need to be able to store it 
+    iii. need to be able to display it
+b. Need mood information 
+    i. need to display a list of options (5)
+    ii. need to be able to store that information OR render something based off of it 
+
+3. Connection display and render a new one based off data and information
+    - tip 
+    Scenario 1:
+    Today's forecast:
+    Pick a mood: 
+        - Very neg 
+        - Raining 
+            - tip (Very neg + Raining)  
