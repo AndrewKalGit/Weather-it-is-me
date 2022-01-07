@@ -30,3 +30,5 @@ b. Need mood information
         - Very neg 
         - Raining 
             - tip (Very neg + Raining)  
+
+4. Type in their current zip code or city name and state for now for their weather location: for API

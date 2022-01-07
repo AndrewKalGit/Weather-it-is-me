@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
+import MoodList from './MoodList';
 
 export default function Mood(props) {
-	const [mood, setMood] = useState(0);
 
 	return (
 		<>
 			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
+				<MoodList />
 			</ul>
 		</>
 	);
