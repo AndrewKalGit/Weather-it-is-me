@@ -1,12 +1,12 @@
 import MoodList from './MoodList';
 
-export default function Mood(props) {
-
+export default function Mood({ weather }) {
+	function onClick() {}
 	return (
 		<>
-			<ul>
-				<MoodList />
-			</ul>
+			<div>
+				<MoodList weather={weather} />
+			</div>
 		</>
 	);
 }
