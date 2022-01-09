@@ -7,18 +7,22 @@ import Location from './Location';
 import react from 'react';
 
 function App() {
-	const [location, setLocation] = useState('');
+	const [zipcode, setZipcode] = useState('');
 	const [weather, setWeather] = useState(null);
 
 	return (
 		<>
-			<h1>
+			<h1 className='head1'>
 				Weather it is me? <span>or not ...</span>
 			</h1>
+			
 			<Weather></Weather>
-			<Location setLocation={setLocation} location={location} setWeather={setWeather}></Location>
+			<Location
+				setWeather={setWeather}
+				zipcode={zipcode}
+				setZipcode={setZipcode}></Location>
 			<Mood weather={weather}></Mood>
-			<Output location={location} weather={weather}></Output>
+			<Output weather={weather} zipcode={zipcode}></Output>
 		</>
 	);
 }
