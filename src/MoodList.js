@@ -3,6 +3,8 @@ import Mood from './Mood';
 import Location from './Location'; //Keep here for now we might need
 
 function MoodList({ weather }) {
+	const [tip, setTip] = useState(null)
+	const [moodForm, setMoodForm] = useState('');
 	const [moodLists, setMoodList] = useState([
 		{
 			mood: 'very negative',
@@ -16,19 +18,37 @@ function MoodList({ weather }) {
 		{ mood: 'very positive', selected: false, id: 4 },
 	]);
 
+	//function compare the 2: weather api data and human data
+	//<p {function name here}></p>
+	//have another state variable for advice and 
+
+	//simple version no logic
+	function generateTips() {
+		//after if logic to determine tip
+		setTip('this is your tip')
+	}
+
+	function handleChange(event) {
+		setMoodForm(event.target.value);
+		generateTips();
+		//trigger the function to compare 
+		//compare weather and selected mood 
+	}
+	//regular expressions form validation and make user only put in what you want post mvp
 	return (
 		<>
 			<div className='dropdown'>
-				<button className='dropbtn'>Drop Down</button>
-				<h4>{}</h4>
-				<div className='dropdown-content'>
-					<span>{moodLists[0].mood}</span>
-					<span>{moodLists[1].mood}</span>
-					<span>{moodLists[2].mood}</span>
-					<span>{moodLists[3].mood}</span>
-					<span>{moodLists[4].mood}</span>
-				</div>
+				<label htmlFor='Moods'>Select a mood: </label>
+				<select onChange={handleChange} name='Moods' value={moodForm}>
+					<option>-</option>
+					<option value={moodLists[0].mood}>{moodLists[0].mood}</option>
+					<option value={moodLists[1].mood}>{moodLists[1].mood}</option>
+					<option value={moodLists[2].mood}>{moodLists[2].mood}</option>
+					<option value={moodLists[3].mood}>{moodLists[3].mood}</option>
+					<option value={moodLists[4].mood}>{moodLists[4].mood}</option>
+				</select>
 			</div>
+			<p>{tip && tip}</p>
 		</>
 	);
 }

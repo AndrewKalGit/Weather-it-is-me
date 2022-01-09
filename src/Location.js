@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Location({
-	setZipcode,
-	zipcode,
-	setWeather,
-}) {
+export default function Location({ setZipcode, zipcode, setWeather }) {
 	// const initialState = {
 
 	// }
@@ -27,6 +23,7 @@ export default function Location({
 	// const handleChange = (event) => {
 	// 	setLocation({...setLocation, })
 	// };
+	//city name or just zip code for form validate
 
 	return (
 		<>
@@ -35,11 +32,15 @@ export default function Location({
 					<label className='Location'>Location</label>
 					<input
 						type='text'
+						pattern='\d{5}|^[\d,\s]+$'
 						value={zipcode}
 						onChange={(x) => setZipcode(x.target.value)}></input>
 				</div>
-				<button className='Search' type='submit'>Search</button>
+				<button className='Search' type='submit'>
+					Search
+				</button>
 			</form>
 		</>
 	);
 }
+//play around with regular expression after mvp 
