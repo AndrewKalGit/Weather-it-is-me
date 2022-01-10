@@ -11,7 +11,7 @@ export default function Output({ location, weather }) {
 			{weather.weather.map((x, id) => {
 				return (
 					<h5 key={id} className='output'>
-						{x.main}
+						{x.description}
 					</h5>
 				);
 			})}
