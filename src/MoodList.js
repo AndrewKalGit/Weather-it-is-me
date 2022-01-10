@@ -18,17 +18,84 @@ function MoodList({ weather }) {
 	]);
 
 	function generateTips(mood) {
-		console.log(weather);
-		if (
-			mood === 'negative' &&
-			weather.weather[0].description === 'scattered clouds'
-		) {
+		if (mood === 'negative' && weather.weather[0].main === 'Clear') {
 			setTip(
 				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight!'
 			);
+		} else if (
+			mood === 'very negative' &&
+			weather.weather[0].main === 'Clear'
+		) {
+			setTip(
+				"No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight! Sometimes it could just be the weather, but if the walk and sunlight doesn't help don't be afraid to get support!"
+			);
+		} else if (mood === 'positive' && weather.weather[0].main === 'Clear') {
+			setTip(
+				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it!"
+			);
+		} else if (
+			mood === 'very positive' &&
+			weather.weather[0].main === 'Clear'
+		) {
+			setTip(
+				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it! Sometimes even if you on top of the world it's good to not become complacent with your health"
+			);
+		} else if (mood === 'neutral' && weather.weather[0].main === 'Clear') {
+			setTip(
+				'Nothing wrong feeling just "ok"! It is ok to feel good as well, so go out for some sunlight and brighten your day!'
+			);
+		} else {
+			setTip(
+				'This weather is not supported yet and the tip is still in development'
+			);
+		}
+
+		if (mood === 'negative' && weather.weather[0].main === 'Clouds') {
+			setTip(
+				'Oh no! Just remember it is ok to feel not ok and more often than not studies show bad weather and little sunlight can affect mood. Days like this it is even more important to have good company to remind you the world is not that bad after all.'
+			);
+		} else if (
+			mood === 'very negative' &&
+			weather.weather[0].main === 'Clouds'
+		) {
+			setTip(
+				'Oh no! Just remember it is ok to feel not ok and more often than not studies show bad weather and little sunlight can affect mood. Days like this it is even more important to have good company to remind you the world is not that bad after all. If you are feeling depressed or just very down seek support and utilize resources around you! Warm regards <3'
+			);
+		} else if (mood === 'positive' && weather.weather[0].main === 'Clouds') {
+			setTip(
+				"That's awesome that you are feeling good, keep it up and make sure you focus on the silver linings. Keep doing what you are doing!"
+			);
+		} else if (
+			mood === 'very positive' &&
+			weather.weather[0].main === 'Clouds'
+		) {
+			setTip(
+				"That's awesome that you are feeling good, keep it up and make sure you focus on the silver linings. Keep doing what you are doing! Make sure not to neglect yourself even when you are feeling good. Sometimes when people feel very great, they can often forget how they got there. :^) Keep it up!"
+			);
+		} else if (mood === 'neutral') {
+			setTip(
+				'Nothing wrong feeling just "ok"! It is ok to feel good as well, so surround yourself in an environment you love or with people you love being around!'
+			);
+		}
+		if (mood === 'negative' && weather.weather[0].main === 'Clear') {
+			setTip(
+				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight!'
+			);
+		} else if (mood === 'very negative') {
+			setTip(
+				"No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight! Sometimes it could just be the weather, but if the walk and sunlight doesn't help don't be afraid to get support!"
+			);
 		} else if (mood === 'positive') {
 			setTip(
-				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight! blah blah'
+				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it!"
+			);
+		} else if (mood === 'very positive') {
+			setTip(
+				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it! Sometimes even if you on top of the world it's good to not become complacent with your health."
+			);
+		} else if (mood === 'neutral') {
+			setTip(
+				'Nothing wrong feeling just "ok"! It is ok to feel good as well, so go out for some sunlight and brighten your day!'
 			);
 		}
 	}
