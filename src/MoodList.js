@@ -17,28 +17,37 @@ function MoodList({ weather }) {
 		{ mood: 'very positive', selected: false, id: 4 },
 	]);
 
-	function generateTips() {
+	function generateTips(mood) {
+		console.log(weather);
 		if (
-			weather &&
-			moodForm === 'negative' &&
-			weather.weather[0].main === 'clear'
+			mood === 'negative' &&
+			weather.weather[0].description === 'scattered clouds'
 		) {
 			setTip(
 				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight!'
 			);
+		} else if (mood === 'positive') {
+			setTip(
+				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight! blah blah'
+			);
 		}
 	}
-	console.log(setTip);
+
 	function handleChange(event) {
+		console.log(event.target.value);
 		setMoodForm(event.target.value);
-		generateTips();
+		generateTips(event.target.value);
 	}
 
 	return (
 		<>
 			<div className='dropdown'>
 				<label htmlFor='Moods'>Select a mood: </label>
-				<select onChange={handleChange} name='Moods' value={moodForm}>
+				<select
+					onChange={handleChange}
+					name='Moods'
+					value={moodForm}
+					disabled={weather ? false : true}>
 					<option>-</option>
 					<option value={moodLists[0].mood}>{moodLists[0].mood}</option>
 					<option value={moodLists[1].mood}>{moodLists[1].mood}</option>

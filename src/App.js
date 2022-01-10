@@ -15,14 +15,15 @@ function App() {
 			<h1 className='head1'>
 				Weather it is me? <span>or not ...</span>
 			</h1>
-
-			<Description></Description>
-			<Location
-				setWeather={setWeather}
-				zipcode={zipcode}
-				setZipcode={setZipcode}></Location>
-			<Mood weather={weather}></Mood>
-			<Output weather={weather} zipcode={zipcode}></Output>
+			<div className='flex-container'>
+				<Description></Description>
+				<Location
+					setWeather={setWeather}
+					zipcode={zipcode}
+					setZipcode={setZipcode}></Location>
+				<Mood weather={weather}></Mood>
+				<Output weather={weather} zipcode={zipcode}></Output>
+			</div>
 		</>
 	);
 }
