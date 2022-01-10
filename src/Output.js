@@ -3,7 +3,7 @@ import MoodList from './MoodList';
 
 export default function Output({ location, weather }) {
 	if (!weather) {
-		return <h3 className='output'>Current: no data</h3>;
+		return <h3 className='output'>Current: no weather data available</h3>;
 	}
 
 	return (
