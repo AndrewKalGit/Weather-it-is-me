@@ -77,25 +77,25 @@ function MoodList({ weather }) {
 				'Nothing wrong feeling just "ok"! It is ok to feel good as well, so surround yourself in an environment you love or with people you love being around!'
 			);
 		}
-		if (mood === 'negative' && weather.weather[0].main === 'Clear') {
+		if (mood === 'negative' && weather.weather[0].main === 'Rain') {
 			setTip(
-				'No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight!'
+				'It is raining, caution while driving. Rain can provoke feelings of sadness and depression. It is important to stay connected to other areas of your life that make you feel well.'
 			);
-		} else if (mood === 'very negative') {
+		} else if (mood === 'very negative' && weather.weather[0].main === 'Rain') {
 			setTip(
-				"No clouds obstructing the sunshine! Since you are feeling down go for a walk, and get some sunlight! Sometimes it could just be the weather, but if the walk and sunlight doesn't help don't be afraid to get support!"
+				'It is raining, caution while driving. Rain can provoke feelings of sadness and depression. It is important to stay connected to other areas of your life that make you feel well. It could feel like a mellow moment, and the rain may not be helping. Days like this since it may be hard to be outside, look around your home space and appreciate or possibly even enjoy what you do have'
 			);
-		} else if (mood === 'positive') {
+		} else if (mood === 'positive' && weather.weather[0].main === 'Rain') {
 			setTip(
-				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it!"
+				"That's awesome that you are feeling good, stay well. Sine it may be harder to go out, take some time to appreciate what you have indoors"
 			);
-		} else if (mood === 'very positive') {
+		} else if (mood === 'very positive' && weather.weather[0].main === 'Rain') {
 			setTip(
-				"That's awesome that you are feeling good, keep it up and get some sunlight to maintain it! Sometimes even if you on top of the world it's good to not become complacent with your health."
+				"That's awesome that you are feeling good, stay well. Sine it may be harder to go out, take some time to appreciate what you have indoors. It is easy to lose sight and take how you became so happy for granted! Take some time to reflect on what's contributing to this happiness :^) Cheers!"
 			);
-		} else if (mood === 'neutral') {
+		} else if (mood === 'neutral' && weather.weather[0].main === 'Rain') {
 			setTip(
-				'Nothing wrong feeling just "ok"! It is ok to feel good as well, so go out for some sunlight and brighten your day!'
+				'Nothing wrong feeling just "ok"! It is ok to feel good as well. Take this time to be intentional and appreciate what you have inside of your home enviroment!'
 			);
 		}
 	}
