@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Output from './Output';
 import Mood from './Mood';
-import Weather from './Weather';
+import Description from './Description';
 import Location from './Location';
 import react from 'react';
 
@@ -16,7 +16,7 @@ function App() {
 				Weather it is me? <span>or not ...</span>
 			</h1>
 			
-			<Weather></Weather>
+			<Description></Description>
 			<Location
 				setWeather={setWeather}
 				zipcode={zipcode}

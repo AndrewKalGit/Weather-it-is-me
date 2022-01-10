@@ -32,7 +32,8 @@ export default function Location({ setZipcode, zipcode, setWeather }) {
 					<label className='Location'>Location</label>
 					<input
 						type='text'
-						pattern='\d{5}|^[\d,\s]+$'
+						// pattern='\d{5}|^[\d,\s]+$'
+						placeholder='Zip Code, US'
 						value={zipcode}
 						onChange={(x) => setZipcode(x.target.value)}></input>
 				</div>
