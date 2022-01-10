@@ -15,7 +15,7 @@ function App() {
 			<h1 className='head1'>
 				Weather it is me? <span>or not ...</span>
 			</h1>
-			
+
 			<Description></Description>
 			<Location
 				setWeather={setWeather}
