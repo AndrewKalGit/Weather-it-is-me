@@ -15,14 +15,16 @@ function App() {
 			<h1 className='head1'>
 				Weather it is me? <span>or not ...</span>
 			</h1>
-			<div className='flex-container'>
+			<div className='grid-container'>
 				<Description></Description>
 				<Location
 					setWeather={setWeather}
 					zipcode={zipcode}
 					setZipcode={setZipcode}></Location>
 				<Mood weather={weather}></Mood>
-				<Output weather={weather} zipcode={zipcode}></Output>
+				<span className='flex-container'>
+					<Output weather={weather} zipcode={zipcode}></Output>
+				</span>
 			</div>
 		</>
 	);

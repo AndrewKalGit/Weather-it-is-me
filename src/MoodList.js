@@ -109,7 +109,9 @@ function MoodList({ weather }) {
 	return (
 		<>
 			<div className='dropdown'>
-				<label htmlFor='Moods'>Select a mood: </label>
+				<label htmlFor='Moods' className='white-space'>
+					Select a mood:{' '}
+				</label>
 				<select
 					onChange={handleChange}
 					name='Moods'
@@ -123,7 +125,8 @@ function MoodList({ weather }) {
 					<option value={moodLists[4].mood}>{moodLists[4].mood}</option>
 				</select>
 			</div>
-			<p>{tip && tip}</p>
+			<br></br>
+			<p id='whitesmoke'>{tip && tip}</p>
 		</>
 	);
 }

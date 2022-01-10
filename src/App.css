@@ -1,6 +1,9 @@
 .App {
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	font-family: 'Fuzzy Bubbles', cursive, arial;
+	font-family: 'Josefin Slab', serif;
 }
 
 span {
@@ -9,10 +12,68 @@ span {
 }
 
 body {
-	background-color: rgb(195, 225, 235);
+	background-color: rgb(145, 210, 230);
 }
 
-/* .flex-container {
-	display: flex;
-	align-items: center;
-} */
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+p {
+	margin: 1px;
+	font-size: 25px;
+	font-weight: bolder;
+	color: white;
+}
+
+.howTo {
+	margin-bottom: 20px;
+}
+
+h1 {
+	color: white;
+	font-size: 50px;
+}
+
+.output {
+	color: white;
+	font-size: 50px;
+}
+
+button {
+	background-color: rgb(80, 180, 220); /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	border-radius: 7.5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	cursor: pointer;
+}
+
+button:hover {
+	opacity: 0.5;
+	transition-duration: 0.5s;
+}
+
+.white-text {
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.dropdown {
+	color: white;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#whitesmoke {
+	color: lightgoldenrodyellow;
+}

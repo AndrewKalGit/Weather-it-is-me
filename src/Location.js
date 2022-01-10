@@ -21,7 +21,7 @@ export default function Location({ setZipcode, zipcode, setWeather }) {
 		<>
 			<form onSubmit={handleSubmit}>
 				<div>
-					<label className='Location'>Location</label>
+					<label className='white-text'>Location: </label>
 					<input
 						type='text'
 						placeholder='Zip Code, US'

@@ -3,16 +3,16 @@ import MoodList from './MoodList';
 
 export default function Output({ location, weather }) {
 	if (!weather) {
-		return <h3 className='output'>no data</h3>;
+		return <h3 className='output'>Current: no data</h3>;
 	}
 
 	return (
 		<div>
 			{weather.weather.map((x, id) => {
 				return (
-					<h5 key={id} className='output'>
+					<h2 key={id} className='output'>
 						{x.description}
-					</h5>
+					</h2>
 				);
 			})}
 		</div>
