@@ -10,7 +10,6 @@ Wellness app that takes basic mood/weather data and gives recommendation based o
 - HTML
 - CSS
 - React
-- Open
 - Open Weather Map API
 
 ## Getting Started/Installation Instructions:

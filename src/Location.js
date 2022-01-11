@@ -7,7 +7,7 @@ export default function Location({ setZipcode, zipcode, setWeather }) {
 	};
 
 	function getWeatherByCity() {
-		const url = `https://api.openweathermap.org/data/2.5/weather?q=${zipcode}&appid=${process.env.API_KEY}`;
+		const url = `https://api.openweathermap.org/data/2.5/weather?q=${zipcode}&appid=${process.env.REACT_APP_API_KEY}`;
 		fetch(url)
 			.then((res) => res.json())
 			.then((json) => setWeather(json))
