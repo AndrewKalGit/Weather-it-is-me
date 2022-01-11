@@ -13,6 +13,9 @@ span {
 
 body {
 	background-color: rgb(145, 210, 230);
+	background-image: url('thisthis.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .grid-container {
