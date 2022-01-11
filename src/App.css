@@ -80,3 +80,8 @@ button:hover {
 #whitesmoke {
 	color: lightgoldenrodyellow;
 }
+
+.smallDisclaimer {
+	font-size: 18px;
+	font-weight: bold;
+}

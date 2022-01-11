@@ -29,6 +29,11 @@ export default function Location({ setZipcode, zipcode, setWeather }) {
 				<button className='Search' type='submit'>
 					Search
 				</button>
+				<p className='smallDisclaimer'>
+					Currently mainly supports 5 digit zip codes followed by a comma and a
+					2 letter country code. For best results follow exact format, don't
+					include spaces.
+				</p>
 			</form>
 		</>
 	);
