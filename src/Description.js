@@ -4,8 +4,7 @@ export default function Description(props) {
 	return (
 		<>
 			<p className='howTo'>
-				Type in your Zip Code followed by a comma " , " and your Country Code.
-				Then select your mood!
+				Type in your Zip Code followed by a comma " , " and Country Code.
 			</p>
 			<p> Select your mood and see the recommended course of action</p>
 		</>
