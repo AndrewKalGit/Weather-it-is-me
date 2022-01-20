@@ -13,8 +13,7 @@ span {
 
 body {
 	background-color: rgb(145, 210, 230);
-	background-image: url('wallpaper.jpg');
-	background-repeat: no-repeat;
+	background-image: url('weatherphoto.jpeg');
 	background-size: cover;
 }
 
