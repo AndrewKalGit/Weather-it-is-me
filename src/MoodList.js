@@ -101,7 +101,6 @@ function MoodList({ weather }) {
 	}
 
 	function handleChange(event) {
-		console.log(event.target.value);
 		setMoodForm(event.target.value);
 		generateTips(event.target.value);
 	}
