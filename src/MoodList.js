@@ -126,7 +126,7 @@ function MoodList({ weather }) {
 				</select>
 			</div>
 			<br></br>
-			<p id='whitesmoke'>{tip && tip}</p>
+			<p>{tip && tip}</p>
 		</>
 	);
 }
